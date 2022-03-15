@@ -4,38 +4,13 @@ import Resultsarea from './Resultsarea'
 import Weatherform from './Weatherform'
 
 const Weatherarea = () => {
-    // example openweather direct geocoding api call
-    // http://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid={API Key}
-    // fields in response: name, lat, lon, country, state
-    // lat and lon used in api call to openweather map
-
-    // Los Angeles, Denver, London -test values
-
-    // example openweather weather data call
-    // api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
-    // add optional imperial units of measurement(&units=imperial)
-    // desired fields [weather][description]/[main][temp]&[humidity]&[feels_like]
-    // [name]/[wind][speed]
-
-    // TODO:
-    // ADD A BUTTON LATER TO SWITCH BETWEEN FARENHEIGHT AND CELCIUS
-    // solution must affect how resultsarea prints out text...
-    // ADD A TRY CATCH TO DEAL WITH BAD QUERIES
-    // test out multiple garbage queries...
-    // FIX APIDATA FIRST CALL BEING GARBAGE
-    // first query always is bad lat 0, lon 0, query
-
-    // Resultsarea is always one query behind the user input...
-    // first call uses 0,0 as lat and lon which makes function fail
-    // form calls function -> api gets lat and lon -> stops
-    // fn() called again -> api gets data for old lat and lon -> new lat and lon grabbed from new name
-
+    
     // state variables for latitude and longitude for api calls
     const [lat, setLat] = useState(0)
     const [lon, setLon] = useState(0)
 
     // api key const
-    const apiKey = "a5b4f143e7feeb0356379b4d6439792f"
+    const apiKey = "<OPEN WEATHER API KEY HERE>"
 
     // emoji library
     const emoji = require('emoji-dictionary')
